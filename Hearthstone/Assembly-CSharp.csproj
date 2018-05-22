@@ -51,26 +51,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ability.cs" />
+     <Compile Include="Assets\Abstract\Ability.cs" />
+     <Compile Include="Assets\Abstract\Card.cs" />
+     <Compile Include="Assets\Abstract\Entity.cs" />
+     <Compile Include="Assets\Abstract\Hero.cs" />
+     <Compile Include="Assets\Abstract\HeroPower.cs" />
+     <Compile Include="Assets\Abstract\Minion.cs" />
+     <Compile Include="Assets\Abstract\Spell.cs" />
+     <Compile Include="Assets\Abstract\Weapon.cs" />
      <Compile Include="Assets\Board.cs" />
-     <Compile Include="Assets\Card.cs" />
+     <Compile Include="Assets\Classes\Druid.cs" />
+     <Compile Include="Assets\Classes\Hunter.cs" />
+     <Compile Include="Assets\Classes\Mage.cs" />
+     <Compile Include="Assets\Classes\Paladin.cs" />
+     <Compile Include="Assets\Classes\Priest.cs" />
+     <Compile Include="Assets\Classes\Rogue.cs" />
+     <Compile Include="Assets\Classes\Shaman.cs" />
+     <Compile Include="Assets\Classes\Warlock.cs" />
+     <Compile Include="Assets\Classes\Warrior.cs" />
      <Compile Include="Assets\Collection.cs" />
      <Compile Include="Assets\Deck.cs" />
-     <Compile Include="Assets\Entity.cs" />
-     <Compile Include="Assets\Hero.cs" />
-     <Compile Include="Assets\Heros\Druid.cs" />
-     <Compile Include="Assets\Heros\Hunter.cs" />
-     <Compile Include="Assets\Heros\Mage.cs" />
-     <Compile Include="Assets\Heros\Paladin.cs" />
-     <Compile Include="Assets\Heros\Priest.cs" />
-     <Compile Include="Assets\Heros\Rogue.cs" />
-     <Compile Include="Assets\Heros\Shaman.cs" />
-     <Compile Include="Assets\Heros\Warlock.cs" />
-     <Compile Include="Assets\Heros\Warrior.cs" />
-     <Compile Include="Assets\Minion.cs" />
+     <Compile Include="Assets\Heros\AlleriaWindrunner.cs" />
+     <Compile Include="Assets\Heros\AnduinWrynn.cs" />
+     <Compile Include="Assets\Heros\GarroshHellscream.cs" />
+     <Compile Include="Assets\Heros\Guldan.cs" />
+     <Compile Include="Assets\Heros\JainaProudmoore.cs" />
+     <Compile Include="Assets\Heros\Khadgar.cs" />
+     <Compile Include="Assets\Heros\LadyLiadrin.cs" />
+     <Compile Include="Assets\Heros\Lunara.cs" />
+     <Compile Include="Assets\Heros\MagniBronzebeard.cs" />
+     <Compile Include="Assets\Heros\MaievShadowsong.cs" />
+     <Compile Include="Assets\Heros\MalfurionStormrage.cs" />
+     <Compile Include="Assets\Heros\Medivh.cs" />
+     <Compile Include="Assets\Heros\MorglTheOracle.cs" />
+     <Compile Include="Assets\Heros\Nemsy Necrofizzle.cs" />
+     <Compile Include="Assets\Heros\PrinceArthas.cs" />
+     <Compile Include="Assets\Heros\Rexxar.cs" />
+     <Compile Include="Assets\Heros\Thrall.cs" />
+     <Compile Include="Assets\Heros\TyrandeWhisperwind.cs" />
+     <Compile Include="Assets\Heros\UtherLightbringer.cs" />
+     <Compile Include="Assets\Heros\ValeeraSanguinar.cs" />
      <Compile Include="Assets\Player.cs" />
-     <Compile Include="Assets\Spell.cs" />
-     <Compile Include="Assets\Weapon.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
