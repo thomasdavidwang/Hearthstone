@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿abstract public class Ability {
+	public string abilityName;
+	public void play(){
 
-abstract public class Ability {
-
+	}
 }

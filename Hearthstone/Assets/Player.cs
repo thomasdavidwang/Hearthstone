@@ -1,8 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class Player{
-	public ArrayList deck, hand, board;
+	public ArrayList hand, board;
+	public Deck deck;
 	public Hero hero;
+
+	public Player(Deck d){
+		deck = d;
+		hero = d.hero;
+	}
+
+	public void drawCard(){
+		
+	}
 }
