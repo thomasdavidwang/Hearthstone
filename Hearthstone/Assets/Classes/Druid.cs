@@ -1,13 +1,13 @@
 ﻿public class Druid : Hero {
-	public Druid(Board other) : base(){
+	public Druid(Player p) : base(){
 		health = 30;
 		maxHealth = 30;
 		attack = 0;
 		className = "druid";
-		heroPower = new Shapeshift (this);
+		heroPower = new Shapeshift (p);
 		weapon = null;
 		armor = 0;
-		board = other;
+		player = p;
 	}
 
 	public override void endTurn(){

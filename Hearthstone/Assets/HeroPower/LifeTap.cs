@@ -2,7 +2,7 @@
 
 	public LifeTap(Player p) : base(){
 		player = p;
-		name = "life tap"
+		name = "life tap";
 	}
 	
 	public override void play(){

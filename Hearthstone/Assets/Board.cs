@@ -7,14 +7,6 @@ public class Board {
 	public Board(ArrayList d1, ArrayList d2, string h1, string h2){
 		player1 = new Player(d1, getHero(h1), getHero(h2));
 		player2 = new Player(d2, getHero(h2), getHero(h1));
-		/**Random r = new Random ();
-		if(r.Next(2) == 0){
-			player1 = p1;
-			player2 = p2;
-		} else {
-			player1 = p2;
-			player2 = p1;
-		}*/
 	}
 
 	public Board(Player p1, Player p2){
@@ -22,17 +14,11 @@ public class Board {
 		player2 = p2;
 	}
 
-	/**
-	public Board flip(Board b){
-		return new Board (b.player2, b.player1);
-	}
-	*/
-
 	public Hero getHero(string h){
 		Hero outHero;
 		switch (h) {
 		case "Alleria Windrunner":
-			outHero = new AlleriaWindrunner (this);
+			outHero = new AlleriaWindrunner (this.player1);
 			break;
 		case "Anduin Wrynn":
 			outHero = new AnduinWrynn (this);

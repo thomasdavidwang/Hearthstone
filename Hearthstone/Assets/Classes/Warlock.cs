@@ -4,7 +4,7 @@
 		maxHealth = 30;
 		attack = 0;
 		className = "warlock";
-		heroPower = new LifeTap ();
+		heroPower = new LifeTap (p);
 		weapon = null;
 		armor = 0;
 		player = p;

@@ -1,8 +1,7 @@
 ﻿public class Fireblast : HeroPower {
 
-	public Fireblast(Board b) : base(){
-		board = b;
-		name = "fireblast"
+	public Fireblast() : base(){
+		name = "fireblast";
 	}
 	
 	public void play(Entity other){
