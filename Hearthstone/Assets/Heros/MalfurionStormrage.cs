@@ -1,5 +1,5 @@
 ﻿public class MalfurionStormrage : Druid {
-	public MalfurionStormrage() : base(){
+	public MalfurionStormrage(Board b) : base(b){
 		name = "Malfurion Stormrage";
 	}
 }

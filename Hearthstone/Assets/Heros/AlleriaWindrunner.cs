@@ -1,5 +1,5 @@
 ﻿public class AlleriaWindrunner : Hunter {
-	public AlleriaWindrunner() : base(){
+	public AlleriaWindrunner(Board b) : base(b){
 		name = "Alleria Windrunner";
 	}
 }

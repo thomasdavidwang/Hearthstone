@@ -1,5 +1,5 @@
 ﻿public class Medivh : Mage {
-	public Medivh() : base(){
+	public Medivh(Board b) : base(b){
 		name = "Medivh";
 	}
 }

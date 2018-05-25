@@ -4,5 +4,5 @@
 	public bool alive;
 	//public Ability ability;
 
-	public abstract void break();
+	public abstract void weaponBreak();
 }

@@ -1,5 +1,5 @@
 ﻿public class Lunara : Druid {
-	public Lunara() : base(){
+	public Lunara(Board b) : base(b){
 		name = "Lunara";
 	}
 }

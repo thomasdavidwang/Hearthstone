@@ -1,5 +1,5 @@
 ﻿public class Khadgar : Mage {
-	public Khadgar() : base(){
+	public Khadgar(Board b) : base(b){
 		name = "Khadgar";
 	}
 }
