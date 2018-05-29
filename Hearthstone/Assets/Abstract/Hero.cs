@@ -27,7 +27,7 @@ abstract public class Hero : Entity{
 	}
 
 	public override void die(){
-
+		Test.yell (className);
 	}
 
 	public abstract void addPlayer (ref Player p);
@@ -58,6 +58,9 @@ abstract public class Hero : Entity{
 			health = health - damage + armor;
 		} else {
 			armor = armor - damage;
+		}
+		if (health < 1) {
+			die ();
 		}
 	}
 

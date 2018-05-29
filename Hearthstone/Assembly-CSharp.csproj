@@ -82,6 +82,7 @@
      <Compile Include="Assets\Minions\Hunter\Houndmaster.cs" />
      <Compile Include="Assets\Minions\Mage\WaterElemental.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\Spells\Coin.cs" />
      <Compile Include="Assets\Spells\Hunter\ArcaneShot.cs" />
      <Compile Include="Assets\Spells\Hunter\HuntersMark.cs" />
      <Compile Include="Assets\Spells\Hunter\KillCommand.cs" />

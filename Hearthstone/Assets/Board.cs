@@ -2,13 +2,72 @@
 using System.Collections;
 
 public class Board {
+	public Player curr;
 	Player pmage, phunter;
+	ArrayList mboard, hboard;
+	bool pmageTurn;
 
-	public Board(ArrayList d1, ArrayList d2, Hero mage, Hero hunter){
-		pmage = new Player(ref d1,ref mage,ref hunter);
-		phunter = new Player(ref d2,ref hunter,ref mage);
+	public Board(ref ArrayList d1,ref ArrayList d2,ref Hero mage,ref Hero hunter){
+		mboard = new ArrayList ();
+		hboard = new ArrayList ();
+		pmage = new Player(ref d1,ref mage,ref hunter, ref mboard, ref hboard);
+		phunter = new Player(ref d2,ref hunter,ref mage, ref hboard, ref mboard);
 		mage.addPlayer (ref pmage);
 		hunter.addPlayer (ref phunter);
+		Random rd = new Random();
+		int r = rd.Next(2);
+		pmageTurn = r == 1;
+		if (!pmageTurn) {
+			pmage.drawCard ();
+			pmage.drawCard ();
+			phunter.drawCard ();
+			phunter.drawCard ();
+			phunter.drawCard ();
+			phunter.hand.Add (new Coin ());
+		}else{
+			phunter.drawCard ();
+			phunter.drawCard ();
+			pmage.drawCard ();
+			pmage.drawCard ();
+			pmage.drawCard ();
+			pmage.hand.Add (new Coin ());
+		}
+	}
+
+	public void play(int i){
+		if(i < curr.hand.Count){
+			Card c = (Card) curr.hand [i];
+			curr.hand.RemoveAt (i);
+			c.play (ref curr);
+			if (!(c is Spell)) {
+				curr.board.Add (c);
+			}
+		}
+	}
+
+	public void play(Entity e, int i){
+		if(i < curr.hand.Count){
+			Card c = (Card) curr.hand [i];
+			curr.hand.RemoveAt (i);
+			c.play (ref e, ref curr);
+			if (!(c is Spell)) {
+				curr.board.Add (c);
+			}
+		}
+	}
+
+	public void nextTurn(){
+		if (pmageTurn) {
+			pmage.endTurn ();
+			phunter.startTurn ();
+			curr = phunter;
+			pmageTurn = false;
+		} else {
+			phunter.endTurn ();
+			pmage.startTurn ();
+			curr = pmage;
+			pmageTurn = true;
+		}
 	}
 
 	/**
@@ -82,8 +141,4 @@ public class Board {
 		return outHero;
 	}
 	*/
-
-	public void nextTurn(){
-		
-	}
 }

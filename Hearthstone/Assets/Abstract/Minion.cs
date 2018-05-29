@@ -1,5 +1,4 @@
 ﻿abstract public class Minion : Entity {
-	public int manaCost;
 	public string cardSet, tribe, rarity, classCard;
 
 	public Minion(){
