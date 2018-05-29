@@ -1,20 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Abstract\Minion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Spells\Hunter\Multishot.cs">
     <Files>
-      <File FileName="Assets\Minions\AcidicSwampOoze.cs" Line="8" Column="3" />
-      <File FileName="Assets\Test.cs" Line="31" Column="1" />
-      <File FileName="Assets\Board.cs" Line="10" Column="30" />
-      <File FileName="Assets\Player.cs" Line="17" Column="2" />
-      <File FileName="Assets\Classes\Hunter.cs" Line="10" Column="3" />
-      <File FileName="Assets\Classes\Mage.cs" Line="12" Column="37" />
-      <File FileName="Assets\Abstract\Spell.cs" Line="5" Column="9" />
-      <File FileName="Assets\Abstract\Minion.cs" Line="15" Column="17" />
-      <File FileName="Assets\Abstract\Weapon.cs" Line="7" Column="3" />
-      <File FileName="Assets\Spells\Mage\ArcaneIntellect.cs" Line="13" Column="3" />
-      <File FileName="Assets\Spells\Mage\Frostbolt.cs" Line="10" Column="24" />
-      <File FileName="Assets\Abstract\Entity.cs" Line="5" Column="49" />
-      <File FileName="Assets\Abstract\Hero.cs" Line="45" Column="6" />
+      <File FileName="Assets\Spells\Mage\Fireball.cs" Line="10" Column="19" />
+      <File FileName="Assets\Spells\Hunter\ArcaneShot.cs" Line="9" Column="28" />
+      <File FileName="Assets\Spells\Hunter\Multishot.cs" Line="24" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

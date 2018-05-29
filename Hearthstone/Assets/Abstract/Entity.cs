@@ -10,7 +10,15 @@ abstract public class Entity : Card {
 
 	}
 
-	abstract public void endTurn ();
+	public virtual void endTurn (){
+		foreach(Ability a in abilityList){
+			if (a.name == "freeze") {
+				abilityList.Remove (a);
+			}
+		}
+		canAttack = 1;
+	}
+
 	abstract public void startTurn ();
 	abstract public void takeDamage (int damage);
 	abstract public void hit (ref Entity other);

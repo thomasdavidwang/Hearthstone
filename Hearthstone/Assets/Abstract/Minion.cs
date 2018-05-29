@@ -3,16 +3,12 @@
 	public string cardSet, tribe, rarity, classCard;
 
 	public Minion(){
-		canAttack = 0;
 		this.alive = true;
 	}
 
-	public override void play(Player p){
-
-	}
-
-	public override void endTurn(){
-		canAttack = 1;
+	public override void play(ref Player p){
+		canAttack = 0;
+		p.useMana (manaCost);
 	}
 
 	public override void startTurn(){

@@ -4,8 +4,8 @@
 		name = "fireblast";
 	}
 
-	public void play(Entity other, Player p){
+	public void play(ref Entity other,ref Player p){
 		other.takeDamage (1);
-		base.play (p);
+		base.play (ref p);
 	}
 }

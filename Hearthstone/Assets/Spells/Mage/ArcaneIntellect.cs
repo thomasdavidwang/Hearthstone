@@ -6,9 +6,9 @@
 		classCard = "mage";
 	}
 
-	public override void play(Player p){
+	public override void play(ref Player p){
 		p.drawCard ();
 		p.drawCard ();
-		base.play (p);
+		base.play (ref p);
 	}
 }

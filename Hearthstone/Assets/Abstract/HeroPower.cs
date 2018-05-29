@@ -8,7 +8,7 @@
 		manaCost = 2;
 	}
 
-	public override void play(Player p){
+	public override void play(ref Player p){
 		p.useMana (2);
 		active = false;
 	}

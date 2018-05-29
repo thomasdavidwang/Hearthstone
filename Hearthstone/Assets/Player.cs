@@ -15,6 +15,27 @@ public class Player{
 		manaCount = totalMana;
 	}
 
+	public void startTurn(){
+		drawCard ();
+		if (totalMana < 10) {
+			totalMana++;
+		}
+		manaCount = totalMana;
+	}
+
+	public void endTurn(){
+		foreach (Minion m in board) {
+			if (!m.alive) {
+				board.Remove (m);
+			}
+		}
+		foreach (Minion m in oppBoard) {
+			if (!m.alive) {
+				board.Remove (m);
+			}
+		}
+	}
+
 	public void useMana(int i){
 		manaCount = manaCount - i;
 	}

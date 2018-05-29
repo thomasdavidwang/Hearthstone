@@ -14,12 +14,8 @@ abstract public class Hero : Entity{
 		abilityList = new ArrayList ();
 	}
 
-	public override void play(Player p){
+	public override void play(ref Player p){
 
-	}
-
-	public override void endTurn(){
-		canAttack = 1;
 	}
 
 	public override void startTurn(){

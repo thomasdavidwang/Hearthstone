@@ -9,6 +9,6 @@
 	public void play(Entity other, Player p){
 		other.takeDamage (3);
 		other.abilityList.Add (new Freeze());
-		base.play (p);
+		base.play (ref p);
 	}
 }
