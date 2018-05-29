@@ -14,6 +14,7 @@ public class Board {
 		player2 = p2;
 	}
 
+	/**
 	public Hero getHero(string h){
 		Hero outHero;
 		switch (h) {
@@ -83,6 +84,7 @@ public class Board {
 		}
 		return outHero;
 	}
+	*/
 
 	public void nextTurn(){
 		
