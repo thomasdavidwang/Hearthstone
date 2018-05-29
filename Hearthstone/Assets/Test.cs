@@ -6,9 +6,30 @@ public class Test : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Board board = new Board (null, null, "Rexxar", "Malfurion Stormrage");
-		board.player1.hero.heroPower.play ();
-		Debug.Log (board.player2.hero.health);
+		Hero mage, hunter;
+		mage = new Mage ();
+		hunter = new Hunter ();
+
+		ArrayList mageDeck, hunterDeck;
+		mageDeck = returnMageDeck();
+		hunterDeck = returnHunterDeck();
+
+		Board board = new Board (mageDeck, hunterDeck, mage, hunter);
+	}
+
+	public static ArrayList returnMageDeck(){
+		ArrayList mageDeck = new ArrayList ();
+		mageDeck.Add (new ArcaneIntellect ());
+		mageDeck.Add (new ArcaneIntellect ());
+		mageDeck.Add (new Frostbolt ());
+		mageDeck.Add (new Frostbolt ());
+		return mageDeck;
+	}
+
+	public static ArrayList returnHunterDeck(){
+		ArrayList hunterDeck = new ArrayList ();
+
+		return hunterDeck;
 	}
 
 	public static void yell(){

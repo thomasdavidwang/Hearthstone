@@ -5,7 +5,8 @@
 		name = "steady shot";
 	}
 
-	public override void play(){
+	public override void play(Player p){
 		player.opponent.takeDamage (2);
+		base.play (p);
 	}
 }

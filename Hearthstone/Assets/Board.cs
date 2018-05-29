@@ -2,16 +2,13 @@
 using System.Collections;
 
 public class Board {
-	public Player player1, player2;
+	Player pmage, phunter;
 
-	public Board(ArrayList d1, ArrayList d2, string h1, string h2){
-		player1 = new Player(d1, getHero(h1), getHero(h2));
-		player2 = new Player(d2, getHero(h2), getHero(h1));
-	}
-
-	public Board(Player p1, Player p2){
-		player1 = p1;
-		player2 = p2;
+	public Board(ArrayList d1, ArrayList d2, Hero mage, Hero hunter){
+		pmage = new Player(ref d1,ref mage,ref hunter);
+		phunter = new Player(ref d2,ref hunter,ref mage);
+		mage.addPlayer (ref pmage);
+		hunter.addPlayer (ref phunter);
 	}
 
 	/**

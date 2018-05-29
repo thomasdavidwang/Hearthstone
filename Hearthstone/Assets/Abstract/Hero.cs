@@ -9,31 +9,38 @@ abstract public class Hero : Entity{
 	public Player player;
 
 	public Hero(){
+		canAttack = 1;
 		this.alive = true;
 		abilityList = new ArrayList ();
 	}
 
-	public override void play(){
+	public override void play(Player p){
 
 	}
 
 	public override void endTurn(){
-
+		canAttack = 1;
 	}
 
 	public override void startTurn(){
+		
+	}
 
+	public void breakWeapon(){
+		weapon = null;
 	}
 
 	public override void die(){
 
 	}
 
-	public override void hit(Entity other){
+	public abstract void addPlayer (ref Player p);
+
+	public override void hit(ref Entity other){
 		if (weapon != null) {
 			bool frozen = false;
 			foreach (Entity e in abilityList) {
-				if (e.name = "freeze") {
+				if (e.name == "freeze") {
 					frozen = true;
 				}
 			}
@@ -46,6 +53,7 @@ abstract public class Hero : Entity{
 		if (this.health < 0) {
 			this.alive = false;
 		}
+		canAttack--;
 	}
 
 	public override void takeDamage(int damage){

@@ -2,7 +2,7 @@
 using System.Collections;
 
 abstract public class Entity : Card {
-	public int health, attack, maxHealth;
+	public int health, attack, maxHealth, canAttack;
 	public bool alive;
 	public ArrayList abilityList;
 
@@ -13,6 +13,6 @@ abstract public class Entity : Card {
 	abstract public void endTurn ();
 	abstract public void startTurn ();
 	abstract public void takeDamage (int damage);
-	abstract public void hit (Entity other);
+	abstract public void hit (ref Entity other);
 	abstract public void die ();
 }

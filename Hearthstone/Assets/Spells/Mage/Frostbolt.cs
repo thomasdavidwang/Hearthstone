@@ -4,11 +4,11 @@
 		name = "frostbolt";
 		cardSet = "basic";
 		classCard = "mage";
-		ability = new Freeze ();
 	}
 
-	public override void play(Entity other){
+	public void play(Entity other, Player p){
 		other.takeDamage (3);
 		other.abilityList.Add (new Freeze());
+		base.play (p);
 	}
 }

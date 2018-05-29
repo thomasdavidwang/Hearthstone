@@ -3,20 +3,20 @@
 	public string cardSet, tribe, rarity, classCard;
 
 	public Minion(){
+		canAttack = 0;
 		this.alive = true;
-		play ();
 	}
 
-	public override void play(){
+	public override void play(Player p){
 
 	}
 
 	public override void endTurn(){
-
+		canAttack = 1;
 	}
 
 	public override void startTurn(){
-
+		
 	}
 
 	public override void takeDamage(int damage){
@@ -26,11 +26,11 @@
 		}
 	}
 
-	public override void hit(Entity other){
+	public override void hit(ref Entity other){
 		if (this.attack != 0) {
 			bool frozen = false;
 			foreach (Entity e in abilityList) {
-				if (e.name = "freeze") {
+				if (e.name == "freeze") {
 					frozen = true;
 				}
 			}
@@ -39,5 +39,6 @@
 				this.takeDamage (other.attack);
 			}
 		}
+		canAttack--;
 	}
 }

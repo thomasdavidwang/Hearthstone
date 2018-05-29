@@ -7,12 +7,16 @@ public class Player{
 	public int totalMana;
 	public int manaCount;
 
-	public Player(ArrayList d, Hero h, Hero o){
+	public Player(ref ArrayList d, ref Hero h, ref Hero o){
 		deck = d;
 		hero = h;
 		opponent = o;
 		totalMana = 0;
 		manaCount = totalMana;
+	}
+
+	public void useMana(int i){
+		manaCount = manaCount - i;
 	}
 
 	public void drawCard(){

@@ -3,9 +3,9 @@
 	public Fireblast() : base(){
 		name = "fireblast";
 	}
-	
-	public void play(Entity other){
+
+	public void play(Entity other, Player p){
 		other.takeDamage (1);
-		base.play ();
+		base.play (p);
 	}
 }

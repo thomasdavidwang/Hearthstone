@@ -8,11 +8,12 @@
 		manaCost = 2;
 	}
 
-	public override void play(){
+	public override void play(Player p){
+		p.useMana (2);
 		active = false;
 	}
 
-	public override void endTurn(){
+	public void endTurn(){
 		active = true;
 	}
 }
