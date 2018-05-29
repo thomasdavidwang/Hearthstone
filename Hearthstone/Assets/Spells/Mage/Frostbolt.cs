@@ -8,7 +8,7 @@
 
 	public void play(Entity other, Player p){
 		other.takeDamage (3);
-		other.abilityList.Add (new Freeze());
+		other.abilityList.Add ("frozen");
 		base.play (ref p);
 	}
 }

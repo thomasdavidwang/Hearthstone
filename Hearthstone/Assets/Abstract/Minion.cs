@@ -1,13 +1,18 @@
-﻿abstract public class Minion : Entity {
+﻿using System;
+using System.Collections;
+
+abstract public class Minion : Entity {
 	public string cardSet, tribe, rarity, classCard;
 
 	public Minion(){
-		this.alive = true;
 	}
 
 	public override void play(ref Player p){
 		canAttack = 0;
+		this.alive = true;
+		abilityList = new ArrayList ();
 		p.useMana (manaCost);
+		player = p;
 	}
 
 	public override void startTurn(){
@@ -22,18 +27,28 @@
 	}
 
 	public override void hit(ref Entity other){
-		if (this.attack != 0) {
-			bool frozen = false;
-			foreach (Entity e in abilityList) {
-				if (e.name == "freeze") {
-					frozen = true;
+		ArrayList temp = new ArrayList ();
+		foreach (Minion a in player.oppBoard) {
+			foreach (string s in a.abilityList) {
+				if (s == "taunt") {
+					temp.Add (a);
 				}
 			}
-			if (!frozen) {
-				other.takeDamage (this.attack);
-				this.takeDamage (other.attack);
-			}
 		}
-		canAttack--;
+		if (temp.Contains (other)) {
+			if (this.attack != 0) {
+				bool frozen = false;
+				foreach (string e in abilityList) {
+					if (e == "frozen") {
+						frozen = true;
+					}
+				}
+				if (!frozen) {
+					other.takeDamage (this.attack);
+					this.takeDamage (other.attack);
+				}
+			}
+			canAttack--;
+		}
 	}
 }

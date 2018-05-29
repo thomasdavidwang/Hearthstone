@@ -46,8 +46,8 @@ public class Test : MonoBehaviour {
 		mageDeck.Add (new RiverCrocolisk ());
 		mageDeck.Add (new RiverCrocolisk ());
 		mageDeck.Add (new ShatteredSunCleric ());
-		mageDeck.Add (new ShatteredSunCleric ());
-		mageDeck.Add (new RazorfenHunter ());
+		mageDeck.Add (new SenjinShieldmasta ());
+		mageDeck.Add (new SenjinShieldmasta ());
 		mageDeck.Add (new RazorfenHunter ());
 		mageDeck.Add (new ChillwindYeti ());
 		mageDeck.Add (new ChillwindYeti ());

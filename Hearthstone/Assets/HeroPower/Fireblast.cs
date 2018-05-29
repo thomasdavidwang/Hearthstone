@@ -4,7 +4,7 @@
 		name = "fireblast";
 	}
 
-	public void play(ref Entity other,ref Player p){
+	public override void play(ref Entity other,ref Player p){
 		other.takeDamage (1);
 		base.play (ref p);
 	}

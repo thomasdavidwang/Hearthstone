@@ -6,7 +6,6 @@ abstract public class Hero : Entity{
 	public Weapon weapon;
 	public string className;
 	public HeroPower heroPower;
-	public Player player;
 
 	public Hero(){
 		canAttack = 1;
@@ -33,23 +32,33 @@ abstract public class Hero : Entity{
 	public abstract void addPlayer (ref Player p);
 
 	public override void hit(ref Entity other){
-		if (weapon != null) {
-			bool frozen = false;
-			foreach (Entity e in abilityList) {
-				if (e.name == "freeze") {
-					frozen = true;
+		ArrayList temp = new ArrayList ();
+		foreach (Minion a in player.oppBoard) {
+			foreach (string s in a.abilityList) {
+				if (s == "taunt") {
+					temp.Add (a);
 				}
 			}
-			if(!frozen){
-				other.takeDamage (weapon.attack);
-				weapon.durability = weapon.durability - 1;
-				takeDamage (other.attack);
+		}
+		if (temp.Contains (other)) {
+			if (weapon != null) {
+				bool frozen = false;
+				foreach (string e in abilityList) {
+					if (e == "frozen") {
+						frozen = true;
+					}
+				}
+				if (!frozen) {
+					other.takeDamage (weapon.attack);
+					weapon.durability = weapon.durability - 1;
+					takeDamage (other.attack);
+				}
 			}
+			if (this.health < 0) {
+				this.alive = false;
+			}
+			canAttack--;
 		}
-		if (this.health < 0) {
-			this.alive = false;
-		}
-		canAttack--;
 	}
 
 	public override void takeDamage(int damage){

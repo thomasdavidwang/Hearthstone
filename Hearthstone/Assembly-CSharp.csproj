@@ -51,8 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ability\Freeze.cs" />
-     <Compile Include="Assets\Abstract\Ability.cs" />
      <Compile Include="Assets\Abstract\Card.cs" />
      <Compile Include="Assets\Abstract\Entity.cs" />
      <Compile Include="Assets\Abstract\Hero.cs" />
@@ -76,6 +74,7 @@
      <Compile Include="Assets\Minions\General\OasisSnapjaw.cs" />
      <Compile Include="Assets\Minions\General\RazorfenHunter.cs" />
      <Compile Include="Assets\Minions\General\RiverCrocolisk.cs" />
+     <Compile Include="Assets\Minions\General\SenjinShieldmasta.cs" />
      <Compile Include="Assets\Minions\General\ShatteredSunCleric.cs" />
      <Compile Include="Assets\Minions\General\StonetuskBoar.cs" />
      <Compile Include="Assets\Minions\General\StormwindChampion.cs" />
